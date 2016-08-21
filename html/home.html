@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Secreat Sea</title>
+    <link rel="shortcut icon" type="image/png" href="img/Lovelogo.svg"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="js/DateTimePicker.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Notifications.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/DateTimePicker.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/homevars.js"></script>
+    <script type="text/javascript" src="js/searchPerson.js"></script>
+
+</head>
+
+<body onload="AjaxFindPerson(); getMeetings();">
+    <div class="wrapper">
+        <div class="header">
+            <div class="icon">
+                <img src="img/Lovelogo.svg" height="50px" width="50px">
+            </div>
+            <div class="avatar-menu" id="avatar-menu" title="Account">
+                <div class="UserName" id="UsN"></div>
+                <div class="UserMenu" id="UserMenu">
+                    <div style="text-align: center;" id="">
+                        <a id="pref" style="cursor: pointer;">Preferences</a> | <a id="logout" style="cursor: pointer;" onclick="LogOut();">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-msg">
+        </div>
+        <div class="container">
+            <div id="light" class="popup_meeting">
+                <div class="popup_meeting-wrapper"></div>
+            </div>
+            <div id="fade" class="black_overlay"></div>
+            <div class="preferences" id="preferences">
+                <div class="pref-header">
+                    Edit your Profile
+                    <div style="display: inline-block; font-family: Lato; font-size: 15px;" id="UserId">User's Email:</div>
+                </div>
+                <div style="display: inline-block; margin: 0 auto;">
+                    <form class="pref-changes" id="pref-changes" method="POST">
+                        <div class="pref_avatar" id="ProfileImage" style=" background-color: #488383;">
+                            <div class="avatar_change">Change</div>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <label>Change Username</label>
+                            <input id="Puser" name="username" class="pref_inp" type="text" autocomplete="off">
+                        </div>
+                        <div class="lbl">
+                            <label>Change Password</label>
+                            <input id="Ppass" name="pass" class="pref_inp" placeholder="Password" type="password" autocomplete="off">
+                        </div>
+                        <div class="update_btn">
+                            <button type="button" id="update_profile" name="update_profile" onclick="UpdateProfilePref()">Update</button>
+                        </div>
+                    </form>
+                    <div style="padding-top: 10px; cursor: pointer; font-family: 'Source Sans Pro',sans-serif;" class="cl-effect-1" id="PrefBack">Go back</div>
+                </div>
+            </div>
+            <div>
+            </div>
+            <div class="seas" id="seas">
+
+
+                <div class="sea new-room" id="new-room">
+                    <div class="add-new">New Contact</div>
+                    <img src="img/index.png" height="100px" width="100px" style="margin-left: 70px; margin-top: 100px; position: absolute; cursor: pointer;" title="Add new users to your contact list.">
+                    <span style="position: absolute; margin-top: 6px; margin-left: 5px; background-image: url('img/back.png'); width: 30px; height: 30px;  background-size: 30px 30px; cursor: pointer;" id="SearchBack" title="Back"></span>
+                    <div id="person-search">
+                        <form>
+                            <label class="person-search-label">Insert Person's email</label>
+                            <input type="text" class="person-search-input" id="PersonSearchInput" autocomplete="off" placeholder="user@secretsea.com">
+                        </form>
+                        <div class="search-person-res">
+                            <label id="Label-Result"></label>
+                            <div style="padding-top: 5px;" id="UserNameSearchResult"></div>
+                            <form>
+                                <button style="padding-bottom: 30px;" type="button" class="add-new-person" id="add-person" onclick="AddPerson()">Add the person</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="message-wrapper">
+                <div class="inside-the-ocean">
+                    <div class="message"></div>
+                </div>
+                <div class="inside-the-typesystem">
+                    <form autocomplete="off">
+                        <input type="text" placeholder="Type a message" id="message-sender" autocomplete="off">
+                        <div id="emonicons"></div>
+                    </form>
+                    <div class="spawn-emonicons">
+                        <div class="ico">&#128512;</div>
+                        <div class="ico">&#128513;</div>
+                        <div class="ico">&#128514;</div>
+                        <div class="ico">&#128515;</div>
+                        <div class="ico">&#128516;</div>
+                        <div class="ico">&#128517;</div>
+                        <div class="ico">&#128518;</div>
+                        <div class="ico">&#128519;</div>
+                        <div class="ico">&#128520;</div>
+                        <div class="ico">&#128521;</div>
+                        <div class="ico">&#128522;</div>
+                        <div class="ico">&#128523;</div>
+                        <div class="ico">&#128524;</div>
+                        <div class="ico">&#128525;</div>
+                        <div class="ico">&#128526;</div>
+                        <div class="ico">&#128527;</div>
+                        <div class="ico">&#128528;</div>
+                        <div class="ico">&#128529;</div>
+                        <div class="ico">&#128530;</div>
+                        <div class="ico">&#128531;</div>
+                        <div class="ico">&#128532;</div>
+                        <div class="ico">&#128533;</div>
+                        <div class="ico">&#128534;</div>
+                        <div class="ico">&#128535;</div>
+                        <div class="ico">&#128536;</div>
+                        <div class="ico">&#128537;</div>
+                        <div class="ico">&#128538;</div>
+                        <div class="ico">&#128539;</div>
+                    </div>
+                    <div style="bottom: 0;right:0;float:right; margin-top: -60px; cursor: pointer; font-family: 'Source Sans Pro',sans-serif; position absolute;" class="cl-effect-1" id="LeaveChatRoom">Leave the ocean</div>
+                </div>
+            </div>
+        </div>
+        <div class="ImgUploadWrapper">
+            <div class="ImgToSelect">
+                <p style="font-size: 28px; padding-top: 60px;" onclick="$('#ImageBrowse').click();">Select Image</p>
+                <p style="font-size: 20 px; font-family: 'Source Sans Pro'; padding-top: 10px; padding-bottom: 60px; " onclick="$('#ImageBrowse').click();">*.jpg</p>
+                <form style="margin-top: -20px; width: inherit; cursor: default;" name="photo" id="imageUploadForm" enctype="multipart/form-data" method="post" onsubmit="return false;">
+                    <input type="file" name="image" id="ImageBrowse" style='visibility:hidden;'>
+                    <div id="loading" style="margin-top: -10px; margin-right: 40px;"></div>
+                    <button type="submit" name="upload" id="UploadImageBtn" value="Upload">Upload</button>
+                </form>
+                <div style="padding-top: 10px; cursor: pointer; font-family: 'Source Sans Pro',sans-serif;" class="cl-effect-1" id="ClearImg" onclick="ClearImg()">Clear Profile Image</div>
+                <div style="padding-top: 10px; cursor: pointer; font-family: 'Source Sans Pro',sans-serif;" class="cl-effect-1" id="ImgBack">Go back</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    if (myvar[0] != "") addUsersToFrontEnd(myvar, friends_to_talk);
+    </script>
+</body>
+
+</html>

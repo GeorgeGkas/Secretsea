@@ -1,0 +1,830 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+body {}
+
+.header {
+    background: #FFF none repeat scroll 0% 0%;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    color: #5F6F81;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 60px;
+    font-weight: 300;
+    list-style: outside none none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 999999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ReadyToChat {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #A7A4A4;
+    margin-left: 75px;
+    margin-top: -170px;
+    text-align: center;
+    font-size: 70px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.delete-button {
+    color: #fff;
+    font-size: 20px;
+    text-align: right;
+    cursor: pointer;
+    float: right;
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+.avatar-menu {
+    margin-top: -70px;
+    margin-right: 25px;
+    float: right;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    background-size: 38px 38px;
+    background-color: #488383;
+}
+
+.UserName {
+    float: right;
+    margin-top: -10px;
+    margin-right: 80px;
+}
+
+.container {
+    margin-top: 60px;
+    padding: 10px 15px 10px 25px;
+}
+
+.sea {
+    min-width: 250px;
+    min-height: 300px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.seas {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.UserMenu {
+    background: #FFF none repeat scroll 0% 0%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 2px;
+    min-width: 270px;
+    margin-left: -215px;
+    margin-right: auto;
+}
+
+.preferences {
+    max-width: 600px;
+    margin: 0 auto;
+    height: 300px;
+    text-align: center;
+}
+
+.pref-header {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    border-bottom: 1px solid #E1E1E1;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.pref-change-avatar {
+    display: inline-block;
+    border: 1px solid black;
+    width: 160px;
+    height: 160px;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.user-id-nfo {
+    margin-top: 170px;
+    margin-right: auto;
+    height: auto;
+    border: 1px solid black;
+}
+
+.pref-changes {
+    display: inline-block;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.account-nfo {
+    display: inline-block;
+    border: 1px solid black;
+    max-width: 100px;
+    margin-top: 00px;
+    left: 0;
+    text-align: left;
+}
+
+.update_btn {
+    left: 0;
+    text-align: right;
+}
+
+.lbl {
+    text-align: center;
+}
+
+label {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 18px;
+}
+
+input {
+    padding: 5px;
+    margin: 3px;
+    display: block;
+}
+
+form button#update_profile,
+form button#add-person,
+form button#UploadImageBtn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background-color: #A4B1BD;
+    border: 0;
+    padding: 10px 15px;
+    margin-top: 5px;
+    color: #fff;
+    border-radius: 3px;
+    width: 260px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+form button#update_profile:hover,
+form button#add-person:hover,
+form button#UploadImageBtn:hover {
+    background-color: #c5d1dc;
+}
+
+.ImgUploadWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: 350px;
+    background-color: #FDFDFD;
+}
+
+.ImgToSelect {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px dashed #CCC;
+    width: inherit;
+    text-align: center;
+    font-family: "Maven Pro", sans-serif;
+    height: 200px;
+    cursor: pointer;
+}
+
+.pref_avatar {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    background-size: 120px 120px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.avatar_change {
+    font-size: 14px;
+    font-family: Lato;
+    color: #fff;
+    padding-top: 95px;
+    margin: 0;
+    margin-left: 35px;
+    position: absolute;
+}
+
+.new-room {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-new {
+    position: absolute;
+    width: 247.5px;
+    font-size: 30px;
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: center;
+}
+
+.person-search-label {
+    position: absolute;
+    margin-top: 100px;
+    z-index: 1999;
+    text-align: center;
+    width: 247.5px;
+}
+
+.search-person-res {
+    position: absolute;
+    margin-top: 180px;
+    width: 247.5px;
+    text-align: center;
+    z-index: 1999;
+}
+
+.add-new-person {
+    max-width: 200px;
+    height: 25px;
+    padding: 0px;
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: #52C568;
+}
+
+.add-new-person:hover {
+    background-color: #3BA24E;
+}
+
+.person-search-input {
+    min-width: 200px;
+    max-width: 200px;
+    height: 35px;
+    font-size: 14px;
+    border: 1px solid #CBBBBB;
+    box-shadow: none;
+    z-index: 1999;
+    position: absolute;
+    font-size: "Source Sans Pro", sans-serif;
+    box-shadow: none;
+    margin-left: 25px;
+    margin-top: 140px;
+    text-align: center;
+    padding: 5px;
+}
+
+.homeWindow {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    background: #FFF none repeat scroll 0% 0%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.01);
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.inside-the-paint {
+    width: 249.5px;
+    height: 180px;
+    position: absolute;
+    background-size: 249.5px 180px;
+    margin-top: -1px;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.inside-the-ocean {
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+    left: 20px;
+    margin-top: 100px;
+    overflow: auto;
+    max-height: 70vh;
+}
+
+.message-timestamp {
+    margin-top: -5px;
+    font-size: 11px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.message {
+    padding-bottom: 5px;
+    position: relative;
+    display: block;
+}
+
+.own-avatar-message {
+    position: absolute;
+    margin-left: 10px;
+    border-bottom-left-radius: 10px;
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
+    background-color: #488383;
+}
+
+.own-message2 {
+    padding-left: 50px;
+}
+
+.own-message {
+    padding: 5px 10px 5px;
+    margin: 5px 5px 10px 5px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    line-height: 16px;
+    word-wrap: break-word;
+    word-spacing: 2px;
+    background-color: #eee;
+    color: #263238;
+}
+
+input#message-sender {
+    width: 100%;
+    border: 0 none;
+    padding: 6px 33px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    font-family: Arial, sans-serif;
+    border-color: #C3C3C3 transparent transparent;
+}
+
+input#Puser,
+input#Ppass,
+input#Pemail {
+    font-size: 14px;
+    border: 1px solid #CBBBBB;
+    box-shadow: none;
+    width: 97%;
+    padding: 10px 15px;
+}
+
+#emonicons {
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    margin-left: 8px;
+    background: transparent url("https://ssl.gstatic.com/chat/babble/sprites/common-ea6add32768eb7b804d6dea5981ee51c.png") no-repeat scroll -393px -89px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.ico {
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ico:hover {
+    background-color: #e7e7e7;
+}
+
+.spawn-emonicons {
+    height: 100px;
+    max-width: 580px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: -100px;
+    font-size: 30px;
+    color: #444;
+    padding-left: 5px;
+    overflow: auto;
+    max-height: 100vh;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.inside-the-typesystem {
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    left: 20px;
+    margin-top: 100px;
+    padding-right: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sea-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    background-color: #fff;
+}
+
+.inside-the-paint2 {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    margin-top: 150px;
+    padding-top: 80px;
+}
+
+#SeaTitle {}
+
+#SeaUser {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.online-state {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(75, 87, 76, 0.20);
+    display: inline-block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.show-active {
+    padding-right: 60px;
+}
+
+.switch {
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.cmn-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+.cmn-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+input.cmn-toggle-round + label {
+    padding: 2px;
+    width: 50px;
+    height: 20px;
+    background-color: #dddddd;
+    border-radius: 20px;
+}
+
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+}
+
+input.cmn-toggle-round + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    transition: background 0.4s;
+}
+
+input.cmn-toggle-round + label:after {
+    width: 18px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+}
+
+input.cmn-toggle-round:checked + label:before {
+    background-color: #64d671;
+}
+
+input.cmn-toggle-round:checked + label:after {
+    margin-left: 30px;
+}
+
+
+/* Effect 1: Brackets */
+
+.cl-effect-1::before,
+.cl-effect-1::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-1::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.cl-effect-1:hover::before,
+.cl-effect-1:hover::after,
+.cl-effect-1:focus::before,
+.cl-effect-1:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+#ar {
+    font-size: 13px;
+    padding-bottom: 10px;
+    margin-top: -25px;
+}
+
+.meeting-create {
+    font-size: 13px;
+    padding-bottom: 10px;
+    margin-top: -25px;
+}
+
+.meeting-buttons {
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+    bottom: 0;
+}
+
+.meeting-buttons:hover {
+    color: #5c5b5b;
+}
+
+.clear-elems {
+    height: 5px;
+}
+
+.new-meeting-alert {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    background-color: #e63460; /* #64e634 */
+    color: #fff;
+    padding: 2px 5px 2px 5px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+
+.meeting-time {
+    font-weight: bold;
+    padding: 10px 15px 5px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.21);
+    wiBh: 200px;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    color: #353434;
+    display: inline-block;
+}
+
+
+.meeting-button-close {
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    min-width: 100px;
+    background-color: #23B6C8;
+}
+
+.meeting-button-close a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Lato",sans-serif;
+}
+
+.meeting-header {
+    padding-bottom: 5px;
+}
+
+.popup_meeting-wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+.black_overlay {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.91);
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+}
+
+.popup_meeting {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 300px;
+    padding: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+    color: #111;
+}
+
+input#meeting-input {
+    font-size: 14px;
+    border: 0px;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.21);
+    box-shadow: none;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 15px 5px;
+    text-align: center;
+    margin: auto;
+}
+
+.top-msg {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(42, 45, 50, 0.6);
+    color: rgba(250, 251, 255, 0.95);
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    z-index: 3;
+}
+
+.top-msg-close {
+    display: flex;
+    align-items: center;
+    right: 0;
+    box-sizing: border-box;
+    position: absolute;
+    width: 45px;
+    height: 100%;
+}
+
+.top-msg-inner a {
+    text-decoration: none;
+    color: RGBA(0, 0, 0, 0.6);
+    font-weight: bold;
+}
+
+.top-msg-inner a:hover {
+    color: RGBA(0, 0, 0, 0.5);
+}
+
+.top-msg-inner {
+    float: left;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    margin-left: 65px;
+    width: calc(100% - 110px);
+}
+
+.top-msg-ico {
+    float: left;
+    width: 65px;
+    height: 100%;
+    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-left: 24px;
+    font-size: 45px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-device-width: 980px) {
+    .seas {
+        max-width: 90%;
+    }
+    .sea {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-device-width: 970px) {
+    .seas {
+        max-width: 100%;
+    }
+    .sea {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-device-width: 800px) {
+    .seas {
+        max-width: 80%;
+    }
+    .sea {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-device-width: 770px) {
+    .seas {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-device-width: 360px) {
+    .seas {
+        max-width: 85%;
+    }
+}
+
+@media only screen and (max-device-width: 320px) {
+    .seas {
+        max-width: 100%;
+    }
+}
+
+
+.meeting-button-close a::before,
+.meeting-button-close a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.meeting-button-close a::before {
+    margin-right: 5px;
+    content: '[';
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+.meeting-button-close a::after {
+    margin-left: 5px;
+    content: ']';
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+
+.meeting-button-close a:hover::before,
+.meeting-button-close a:hover::after,
+.meeting-button-close a:focus::before,
+.meeting-button-close a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}

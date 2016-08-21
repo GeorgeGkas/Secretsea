@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secreat Sea</title>
+    <link rel="shortcut icon" type="image/png" href="img/Lovelogo.svg"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta name="description" content="SecretSea is a modern chat-social network that don't requires you to have any other social account to use it. This project is currently on beta stage.">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/Notifications.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-msg">
+        </div>
+        <div class="welcome-container">
+            <div class="Logo">
+                <img src="img/Lovelogo.svg">
+            </div>
+            <div class="header">
+                <h2>&nbsp;Welcome to SecretSea</h2>
+            </div>
+            <div id="version" style="padding-left: 170px; margin-top: -13px; opacity: 0;">
+                <p class="beta">BETA</p>
+            </div>
+            <div class="informations">
+                <p style="padding-left: 0px; padding-right: 0xp; padding-bottom: 10px; font-family: Lato;" id="p1">
+                    A Strictly Two-Side Communication App
+                </p>
+                <p style="padding-bottom: 30px; font-family: Lato;" id="p2">For people who love each other's &#9829</p>
+                <form id="login" method="POST">
+                    <input id="Lemail" name="Lemail" placeholder="Email" required type="email" autocomplete="off">
+                    <input id="LPass" name="LPass" placeholder="Password" required type="password" autocomplete="off">
+                    <div class="checkL"></div>
+                    <button type="submit" id="login-button" name="login-button">Dive</button>
+                </form>
+                <form id="register" method="POST">
+                    <input id="Remail" name="Remail" placeholder="Your_Email@secretsea.com" required="required" type="text" autocomplete="off">
+                    <input id="RPass1" name="RPass1" placeholder="Your Password" required="required" type="password" autocomplete="off">
+                    <input id="RPass2" name="RPass2" placeholder="Your Password" required="required" type="password" autocomplete="off">
+                    <div class="checkR"></div>
+                    <button type="submit" id="register-button" name="register-button">Register</button>
+                    <div class="g-recaptcha" data-sitekey="6Lc6mxcTAAAAAABnITaUtxp3pbH_xUf8fEtj_f7p"></div>
+                </form>
+                <div style="padding-top: 10px;"></div>
+                <div id="About">
+                    <p>Secrecy now becomes</p>
+                    <p>Secretsea</p>
+                    <br \>
+                    <p>This project is under development</p>
+                    <p>more informations coming soon...</p>
+                    <br \>
+                    <p>For project ideas, bug reports or just talking, contact me at:</p>
+                    <p>georgegkas@gmail.com</p>
+                    <div class="LearnMore" id="LearnMoreBack">
+                        <a href="#">Back</a>
+                    </div>
+                </div>
+                <div class="GetStarted" id="GetStarted">
+                    <a href="#">Get Started Today</a>
+                </div>
+                <div class="LearnMore" id="LearnMore">
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="copyright">Created by George G. Gkasdrogkas in Larisa, Greece.</div>
+            </div>
+        </div>
+</body>
+
+</html>
