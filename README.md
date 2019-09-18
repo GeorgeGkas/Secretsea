@@ -1,7 +1,7 @@
 # Secretsea
-Secretsea was a social network that participate in a high school local conference in 2016. My first real project back then. Buggy, lucks good architecture and modern design patterns. Using PHP with AJAX.
 
-After 9 months of development, Secretsea launched at February 2016. Despite the good expectations, it was abandoned four months later. 
+A social network built as high school project back at 2016. Uses PHP and JQuery. No tests, buggy, cost me 9 months of development. The reason I got into Software Engineering...
 
 # LICENSE
+
 Licensed under [MIT](https://opensource.org/licenses/MIT).
